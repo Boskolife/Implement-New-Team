@@ -1,0 +1,128 @@
+// Typography
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+    font-weight: 500;
+    margin: 0;
+    color: $headings-color;
+    line-height: 100%;
+
+    span {
+        color: $purple;
+    }
+}
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+    @include adaptive-value("font-size", 80, 40, 1);
+}
+
+h2,
+.h2 {
+    @include adaptive-value("font-size", 56, 32, 1);
+}
+
+h3,
+.h3 {
+    font-size: $h3-font-size;
+}
+
+h4,
+.h4 {
+    @include adaptive-value("font-size", 28, 22, 1);
+}
+
+h5,
+.h5 {
+    @include adaptive-value("font-size", 24, 20, 1);
+}
+
+h6,
+.h6 {
+    @include adaptive-value("font-size", 20, 18, 1);
+}
+
+p {
+    font-family: "Funnel Sans";
+    margin: 0;
+    color: $blue5B;
+    @include adaptive-value("font-size", 20, 16, 1);
+    line-height: 120%;
+}
+
+a {
+    color: $base-link-color;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+
+    border-radius: 32px;
+    text-align: center;
+    padding: 12px 24px;
+    min-width: 202px;
+    max-width: max-content;
+    width: 100%;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease;
+
+    &.primary {
+        background-color: $blue;
+
+        &:hover {
+            background-color: $purple;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &.secondary {
+        background-color: $white;
+        color: $blue2D;
+        border: 1px solid $blue2D;
+
+        &:hover {
+            background-color: $blue2D;
+            color: $white;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .arrow {
+        max-width: 20px;
+        width: 100%;
+        display: inline-block;
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,89 @@
+.footer {
+    padding: 50px 0;
+    background-color: $blue;
+
+    &_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include media ("<desktop") {
+            flex-direction: column;
+        }
+
+        &_logo {
+            max-width: 202px;
+            width: 100%;
+        }
+
+        &_menu {
+            ul {
+                display: flex;
+                gap: 40px;
+
+                @include media ("<desktop") {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 20px;
+                }
+            }
+
+            a {
+                white-space: nowrap;
+                @include adaptive-value("font-size", 16, 14, 1);
+                @include adaptive-value("line-height", 24, 20, 1);
+                color: $white;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $purple;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+
+    &_social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media ("<desktop") {
+            flex-direction: column;
+        }
+
+        p {
+            @include adaptive-value("font-size", 16, 14, 1);
+            @include adaptive-value("line-height", 24, 20, 1);
+            color: $white;
+            white-space: nowrap;
+        }
+
+        &_links_wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &_link {
+            display: grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background-color: $white;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $purple;
+                transition: all 0.3s ease;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
